@@ -33,6 +33,12 @@ const RoleResource = () => {
   const subProject = searchParams.get('subProject');
   const userRole = localStorage.getItem('userRole') || 'Frontend Developer';
 
+  const roles = [
+    'Frontend Developer', 'Backend Developer', 'DevOps Engineer', 'Product Manager', 
+    'QA Engineer', 'Data Scientist', 'Security Engineer', 'Mobile Developer',
+    'Cloud Architect', 'Site Reliability Engineer', 'AI/ML Engineer', 'UX Designer'
+  ];
+
   useEffect(() => {
     // Load saved files from localStorage
     const savedFiles = localStorage.getItem('uploadedFiles');
@@ -118,30 +124,57 @@ const RoleResource = () => {
   const githubActivity = [
     {
       id: 1,
-      title: "Fix button styles in header component",
+      title: "AWS Lambda: Optimize cold start performance",
       status: "merged",
-      pr: "#123",
-      author: "John Doe",
+      pr: "#1247",
+      author: "Sarah Chen",
       date: "2 hours ago",
-      link: "https://github.com/example/repo/pull/123"
+      link: "https://github.com/amazon/aws-lambda/pull/1247"
     },
     {
       id: 2,
-      title: "Add responsive design for mobile",
+      title: "Prime Video: Enhanced streaming quality algorithm",
       status: "pending",
-      pr: "#124",
-      author: "Jane Smith", 
+      pr: "#2156",
+      author: "Alex Rodriguez", 
       date: "4 hours ago",
-      link: "https://github.com/example/repo/pull/124"
+      link: "https://github.com/amazon/prime-video/pull/2156"
     },
     {
       id: 3,
-      title: "Update TypeScript configurations",
+      title: "Alexa Skills: Voice command accuracy improvements",
+      status: "merged",
+      pr: "#3789",
+      author: "David Kim",
+      date: "6 hours ago",
+      link: "https://github.com/amazon/alexa-skills/pull/3789"
+    },
+    {
+      id: 4,
+      title: "S3 Storage: Multi-region replication optimization",
+      status: "pending",
+      pr: "#4521",
+      author: "Maria Garcia",
+      date: "8 hours ago",
+      link: "https://github.com/amazon/s3-storage/pull/4521"
+    },
+    {
+      id: 5,
+      title: "Marketplace: Payment gateway security update",
       status: "rejected",
-      pr: "#122",
-      author: "Mike Johnson",
+      pr: "#5634",
+      author: "James Wilson",
       date: "1 day ago",
-      link: "https://github.com/example/repo/pull/122"
+      link: "https://github.com/amazon/marketplace/pull/5634"
+    },
+    {
+      id: 6,
+      title: "Logistics: Route optimization ML model update",
+      status: "merged",
+      pr: "#6789",
+      author: "Emily Zhang",
+      date: "1 day ago",
+      link: "https://github.com/amazon/logistics/pull/6789"
     }
   ];
 
@@ -221,16 +254,20 @@ const RoleResource = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
-      <div className="bg-background border-b">
-        <div className="container mx-auto px-6 py-4">
+    <div className="min-h-screen bg-gradient-to-br from-background via-secondary/20 to-primary/5">
+      <div className="bg-background/80 backdrop-blur-sm border-b border-primary/20">
+        <div className="container mx-auto px-6 py-6">
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="p-2" onClick={handleBackToProject}>
-              <ArrowLeft className="w-4 h-4" />
+            <Button 
+              variant="ghost" 
+              className="p-2 hover:bg-primary/10 transition-colors duration-300" 
+              onClick={handleBackToProject}
+            >
+              <ArrowLeft className="w-5 h-5" />
             </Button>
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">{userRole} Resources</h1>
-              <p className="text-muted-foreground">{project} → {subProject}</p>
+            <div className="animate-fade-up">
+              <h1 className="text-3xl font-bold gradient-text">{userRole} Workspace</h1>
+              <p className="text-muted-foreground mt-1">{project} → {subProject}</p>
             </div>
           </div>
         </div>

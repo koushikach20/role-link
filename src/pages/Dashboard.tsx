@@ -41,22 +41,22 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
-      <div className="bg-background border-b">
+    <div className="min-h-screen bg-gradient-to-br from-background via-secondary/30 to-primary/5">
+      <div className="bg-background/80 backdrop-blur-sm border-b border-primary/20">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">Knowledge Transfer Platform</h1>
-              <p className="text-muted-foreground">Welcome back, {userRole}</p>
+            <div className="animate-fade-up">
+              <h1 className="text-3xl font-bold gradient-text">Amazon Knowledge Hub</h1>
+              <p className="text-muted-foreground mt-1">Welcome back, {userRole}</p>
             </div>
-            <div className="flex items-center gap-4">
-              <Badge variant="secondary" className="px-3 py-1">
+            <div className="flex items-center gap-4 animate-slide-in">
+              <Badge variant="secondary" className="px-4 py-2 bg-gradient-to-r from-primary to-primary-glow text-white font-semibold shadow-lg">
                 {userRole}
               </Badge>
               <Button 
                 variant="outline" 
                 onClick={handleLogout}
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 hover:bg-destructive hover:text-white transition-colors duration-300"
               >
                 <LogOut className="w-4 h-4" />
                 Logout
@@ -85,134 +85,276 @@ const Dashboard = () => {
         </div>
 
         <div className="grid lg:grid-cols-4 gap-6 mb-8">
-          <Card>
+          <Card className="card-hover-glow animate-bounce-in bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold">12</p>
-                  <p className="text-sm text-muted-foreground">Active Projects</p>
+                  <p className="text-3xl font-bold gradient-text">24</p>
+                  <p className="text-sm text-muted-foreground">Amazon Services</p>
                 </div>
-                <FileText className="w-8 h-8 text-primary" />
+                <FileText className="w-8 h-8 text-primary animate-pulse-glow" />
               </div>
             </CardContent>
           </Card>
           
-          <Card>
+          <Card className="card-hover-glow animate-bounce-in bg-gradient-to-br from-aws-blue/10 to-aws-blue/5 border-aws-blue/20" style={{animationDelay: '0.1s'}}>
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold">87</p>
+                  <p className="text-3xl font-bold text-aws-blue">1,247</p>
                   <p className="text-sm text-muted-foreground">Documents</p>
                 </div>
-                <Users className="w-8 h-8 text-primary" />
+                <Users className="w-8 h-8 text-aws-blue" />
               </div>
             </CardContent>
           </Card>
           
-          <Card>
+          <Card className="card-hover-glow animate-bounce-in bg-gradient-to-br from-accent/10 to-accent/5 border-accent/20" style={{animationDelay: '0.2s'}}>
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold">156</p>
+                  <p className="text-3xl font-bold text-accent">2,856</p>
                   <p className="text-sm text-muted-foreground">GitHub Commits</p>
                 </div>
-                <GitBranch className="w-8 h-8 text-primary" />
+                <GitBranch className="w-8 h-8 text-accent" />
               </div>
             </CardContent>
           </Card>
           
-          <Card>
+          <Card className="card-hover-glow animate-bounce-in bg-gradient-to-br from-success/10 to-success/5 border-success/20" style={{animationDelay: '0.3s'}}>
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold">94%</p>
-                  <p className="text-sm text-muted-foreground">Team Activity</p>
+                  <p className="text-3xl font-bold text-success">98.7%</p>
+                  <p className="text-sm text-muted-foreground">System Uptime</p>
                 </div>
-                <TrendingUp className="w-8 h-8 text-primary" />
+                <TrendingUp className="w-8 h-8 text-success" />
               </div>
             </CardContent>
           </Card>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">Your Projects</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-2xl font-semibold mb-6 gradient-text animate-fade-up">Amazon Service Portfolio</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <Card 
-              className="card-hover cursor-pointer" 
+              className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-primary/30" 
               onClick={() => handleProjectClick('aws')}
             >
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   Amazon Web Services
-                  <Badge variant="outline">12 sub-projects</Badge>
+                  <Badge className="bg-gradient-aws text-white">23 services</Badge>
                 </CardTitle>
                 <CardDescription>
-                  Cloud infrastructure and microservices platform
+                  Global cloud infrastructure and platform services
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Users className="w-4 h-4" />
-                    24 members
+                    2,847 engineers
                   </span>
                   <span className="flex items-center gap-1">
                     <GitBranch className="w-4 h-4" />
-                    156 commits
+                    12,456 commits
                   </span>
                 </div>
               </CardContent>
             </Card>
 
             <Card 
-              className="card-hover cursor-pointer"
-              onClick={() => handleProjectClick('netflix')}
+              className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border-accent/30"
+              onClick={() => handleProjectClick('prime')}
+              style={{animationDelay: '0.1s'}}
             >
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
-                  Netflix Platform
-                  <Badge variant="outline">8 sub-projects</Badge>
+                  Amazon Prime
+                  <Badge className="bg-gradient-accent text-white">15 features</Badge>
                 </CardTitle>
                 <CardDescription>
-                  Streaming platform and content delivery network
+                  Subscription service and streaming platform
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Users className="w-4 h-4" />
-                    18 members
+                    1,234 engineers
                   </span>
                   <span className="flex items-center gap-1">
                     <GitBranch className="w-4 h-4" />
-                    89 commits
+                    8,934 commits
                   </span>
                 </div>
               </CardContent>
             </Card>
 
             <Card 
-              className="card-hover cursor-pointer"
-              onClick={() => handleProjectClick('google')}
+              className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-warning/10 via-warning/5 to-transparent border-warning/30"
+              onClick={() => handleProjectClick('marketplace')}
+              style={{animationDelay: '0.2s'}}
             >
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
-                  Google Analytics
-                  <Badge variant="outline">6 sub-projects</Badge>
+                  Amazon Marketplace
+                  <Badge className="bg-gradient-warm text-white">18 modules</Badge>
                 </CardTitle>
                 <CardDescription>
-                  Data analytics and machine learning platform
+                  E-commerce platform and seller services
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Users className="w-4 h-4" />
-                    15 members
+                    3,156 engineers
                   </span>
                   <span className="flex items-center gap-1">
                     <GitBranch className="w-4 h-4" />
-                    203 commits
+                    15,672 commits
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card 
+              className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-success/10 via-success/5 to-transparent border-success/30"
+              onClick={() => handleProjectClick('alexa')}
+              style={{animationDelay: '0.3s'}}
+            >
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between">
+                  Amazon Alexa
+                  <Badge className="bg-success text-white">12 skills</Badge>
+                </CardTitle>
+                <CardDescription>
+                  Voice AI and smart home ecosystem
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1">
+                    <Users className="w-4 h-4" />
+                    987 engineers
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <GitBranch className="w-4 h-4" />
+                    6,543 commits
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card 
+              className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-chart-2/10 via-chart-2/5 to-transparent border-chart-2/30"
+              onClick={() => handleProjectClick('logistics')}
+              style={{animationDelay: '0.4s'}}
+            >
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between">
+                  Amazon Logistics
+                  <Badge className="bg-chart-2 text-white">25 systems</Badge>
+                </CardTitle>
+                <CardDescription>
+                  Supply chain and delivery infrastructure
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1">
+                    <Users className="w-4 h-4" />
+                    2,456 engineers
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <GitBranch className="w-4 h-4" />
+                    11,234 commits
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card 
+              className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-chart-4/10 via-chart-4/5 to-transparent border-chart-4/30"
+              onClick={() => handleProjectClick('kindle')}
+              style={{animationDelay: '0.5s'}}
+            >
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between">
+                  Amazon Kindle
+                  <Badge className="bg-chart-4 text-white">8 features</Badge>
+                </CardTitle>
+                <CardDescription>
+                  Digital reading platform and e-book ecosystem
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1">
+                    <Users className="w-4 h-4" />
+                    432 engineers
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <GitBranch className="w-4 h-4" />
+                    3,876 commits
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card 
+              className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-destructive/10 via-destructive/5 to-transparent border-destructive/30"
+              onClick={() => handleProjectClick('gaming')}
+              style={{animationDelay: '0.6s'}}
+            >
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between">
+                  Amazon Gaming
+                  <Badge className="bg-destructive text-white">6 studios</Badge>
+                </CardTitle>
+                <CardDescription>
+                  Game development and Twitch integration
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1">
+                    <Users className="w-4 h-4" />
+                    756 engineers
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <GitBranch className="w-4 h-4" />
+                    4,567 commits
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card 
+              className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-chart-6/10 via-chart-6/5 to-transparent border-chart-6/30"
+              onClick={() => handleProjectClick('healthcare')}
+              style={{animationDelay: '0.7s'}}
+            >
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between">
+                  Amazon Health
+                  <Badge className="bg-chart-6 text-white">14 solutions</Badge>
+                </CardTitle>
+                <CardDescription>
+                  Healthcare technology and pharmacy services
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1">
+                    <Users className="w-4 h-4" />
+                    634 engineers
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <GitBranch className="w-4 h-4" />
+                    2,945 commits
                   </span>
                 </div>
               </CardContent>
@@ -220,31 +362,58 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div>
-          <h2 className="text-xl font-semibold mb-4">Recent Activity</h2>
-          <Card>
+        <div className="animate-fade-up">
+          <h2 className="text-2xl font-semibold mb-6 gradient-text">Live Activity Feed</h2>
+          <Card className="card-hover-glow bg-gradient-to-br from-background via-secondary/10 to-primary/5 border-primary/20">
             <CardContent className="p-0">
-              <div className="divide-y">
-                <div className="p-4 flex items-center gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <div className="divide-y divide-border/50">
+                <div className="p-6 flex items-center gap-4 hover:bg-primary/5 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse-glow"></div>
                   <div className="flex-1">
-                    <p className="text-sm font-medium">New document uploaded to AWS Infrastructure</p>
-                    <p className="text-xs text-muted-foreground">2 hours ago</p>
+                    <p className="text-sm font-medium">AWS Lambda deployment completed successfully</p>
+                    <p className="text-xs text-muted-foreground">by DevOps Team • 12 minutes ago</p>
                   </div>
+                  <Badge className="bg-success text-white">Success</Badge>
                 </div>
-                <div className="p-4 flex items-center gap-4">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="p-6 flex items-center gap-4 hover:bg-aws-blue/5 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-aws-blue rounded-full animate-pulse"></div>
                   <div className="flex-1">
-                    <p className="text-sm font-medium">GitHub PR merged: Payment API updates</p>
-                    <p className="text-xs text-muted-foreground">4 hours ago</p>
+                    <p className="text-sm font-medium">Prime Video: New streaming codec integration</p>
+                    <p className="text-xs text-muted-foreground">by Video Engineering • 1 hour ago</p>
                   </div>
+                  <Badge className="bg-aws-blue text-white">In Progress</Badge>
                 </div>
-                <div className="p-4 flex items-center gap-4">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <div className="p-6 flex items-center gap-4 hover:bg-accent/5 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-accent rounded-full"></div>
                   <div className="flex-1">
-                    <p className="text-sm font-medium">Access granted to Netflix Backend resources</p>
-                    <p className="text-xs text-muted-foreground">1 day ago</p>
+                    <p className="text-sm font-medium">Alexa Skills: Voice recognition model updated</p>
+                    <p className="text-xs text-muted-foreground">by AI/ML Team • 2 hours ago</p>
                   </div>
+                  <Badge className="bg-accent text-white">Deployed</Badge>
+                </div>
+                <div className="p-6 flex items-center gap-4 hover:bg-warning/5 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-warning rounded-full"></div>
+                  <div className="flex-1">
+                    <p className="text-sm font-medium">Marketplace: Payment gateway optimization</p>
+                    <p className="text-xs text-muted-foreground">by Payments Team • 4 hours ago</p>
+                  </div>
+                  <Badge className="bg-warning text-black">Testing</Badge>
+                </div>
+                <div className="p-6 flex items-center gap-4 hover:bg-chart-2/5 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-chart-2 rounded-full"></div>
+                  <div className="flex-1">
+                    <p className="text-sm font-medium">Logistics: Route optimization algorithm deployed</p>
+                    <p className="text-xs text-muted-foreground">by Logistics Engineering • 6 hours ago</p>
+                  </div>
+                  <Badge className="bg-chart-2 text-white">Live</Badge>
+                </div>
+                <div className="p-6 flex items-center gap-4 hover:bg-chart-4/5 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-chart-4 rounded-full"></div>
+                  <div className="flex-1">
+                    <p className="text-sm font-medium">Kindle: New reading experience features</p>
+                    <p className="text-xs text-muted-foreground">by Reading Experience • 8 hours ago</p>
+                  </div>
+                  <Badge className="bg-chart-4 text-white">Beta</Badge>
                 </div>
               </div>
             </CardContent>
