@@ -19,46 +19,39 @@ const ProjectDetail = () => {
   const getSubProjects = (projectId: string) => {
     const projects = {
       'aws': [
-        { id: 'ec2', name: 'EC2 Compute', description: 'Virtual servers and auto-scaling infrastructure', progress: 94, team: 145, commits: 2847, priority: 'high' },
-        { id: 's3', name: 'S3 Storage', description: 'Global object storage and data lakes', progress: 98, team: 89, commits: 1923, priority: 'critical' },
-        { id: 'lambda', name: 'Lambda Serverless', description: 'Event-driven serverless computing', progress: 87, team: 167, commits: 3456, priority: 'high' },
-        { id: 'rds', name: 'RDS Database', description: 'Managed relational database services', progress: 91, team: 78, commits: 1567, priority: 'medium' },
-        { id: 'eks', name: 'EKS Kubernetes', description: 'Managed Kubernetes container orchestration', progress: 85, team: 234, commits: 2890, priority: 'high' },
-        { id: 'cloudfront', name: 'CloudFront CDN', description: 'Global content delivery network', progress: 96, team: 56, commits: 1234, priority: 'medium' }
+        { id: 'ec2', name: 'EC2 Compute', description: 'Virtual servers and auto-scaling infrastructure', progress: 94, team: 245, commits: 847, priority: 'high' },
+        { id: 's3', name: 'S3 Storage', description: 'Global object storage and data lakes', progress: 98, team: 189, commits: 923, priority: 'critical' },
+        { id: 'lambda', name: 'Lambda Serverless', description: 'Event-driven serverless computing', progress: 87, team: 267, commits: 1456, priority: 'high' },
+        { id: 'rds', name: 'RDS Database', description: 'Managed relational database services', progress: 91, team: 178, commits: 567, priority: 'medium' },
+        { id: 'cloudfront', name: 'CloudFront CDN', description: 'Global content delivery network', progress: 96, team: 156, commits: 1234, priority: 'medium' }
       ],
       'prime': [
-        { id: 'video', name: 'Prime Video', description: 'Streaming platform and content delivery', progress: 96, team: 456, commits: 5678, priority: 'critical' },
-        { id: 'music', name: 'Prime Music', description: 'Music streaming and playlist management', progress: 88, team: 234, commits: 3421, priority: 'high' },
-        { id: 'gaming', name: 'Prime Gaming', description: 'Game downloads and Twitch integration', progress: 82, team: 167, commits: 2890, priority: 'medium' },
-        { id: 'delivery', name: 'Prime Delivery', description: 'Logistics and shipping optimization', progress: 94, team: 345, commits: 4532, priority: 'high' }
+        { id: 'video', name: 'Prime Video', description: 'Streaming platform and content delivery', progress: 96, team: 256, commits: 1678, priority: 'critical' },
+        { id: 'music', name: 'Prime Music', description: 'Music streaming and playlist management', progress: 88, team: 134, commits: 821, priority: 'high' },
+        { id: 'gaming', name: 'Prime Gaming', description: 'Game downloads and Twitch integration', progress: 82, team: 167, commits: 590, priority: 'medium' },
+        { id: 'delivery', name: 'Prime Delivery', description: 'Logistics and shipping optimization', progress: 94, team: 145, commits: 932, priority: 'high' },
+        { id: 'reading', name: 'Prime Reading', description: 'E-book and magazine subscription', progress: 90, team: 89, commits: 467, priority: 'medium' }
       ],
       'marketplace': [
-        { id: 'catalog', name: 'Product Catalog', description: 'Product information and search engine', progress: 93, team: 567, commits: 6789, priority: 'critical' },
-        { id: 'payments', name: 'Payment Systems', description: 'Transaction processing and fraud detection', progress: 97, team: 234, commits: 4567, priority: 'critical' },
-        { id: 'fulfillment', name: 'Fulfillment Centers', description: 'Warehouse management and robotics', progress: 89, team: 789, commits: 8901, priority: 'high' },
-        { id: 'recommendations', name: 'ML Recommendations', description: 'AI-powered product suggestions', progress: 91, team: 156, commits: 2345, priority: 'high' }
+        { id: 'catalog', name: 'Product Catalog', description: 'Product information and search engine', progress: 93, team: 367, commits: 1789, priority: 'critical' },
+        { id: 'payments', name: 'Payment Systems', description: 'Transaction processing and fraud detection', progress: 97, team: 234, commits: 1567, priority: 'critical' },
+        { id: 'fulfillment', name: 'Fulfillment Centers', description: 'Warehouse management and robotics', progress: 89, team: 289, commits: 1901, priority: 'high' },
+        { id: 'recommendations', name: 'ML Recommendations', description: 'AI-powered product suggestions', progress: 91, team: 156, commits: 845, priority: 'high' },
+        { id: 'seller', name: 'Seller Platform', description: 'Third-party seller tools and analytics', progress: 86, team: 145, commits: 1456, priority: 'medium' }
       ],
       'alexa': [
-        { id: 'voice', name: 'Voice Recognition', description: 'Natural language processing engine', progress: 95, team: 234, commits: 4567, priority: 'critical' },
-        { id: 'skills', name: 'Alexa Skills', description: 'Third-party skill development platform', progress: 87, team: 156, commits: 2890, priority: 'high' },
-        { id: 'smart-home', name: 'Smart Home', description: 'IoT device integration and control', progress: 92, team: 189, commits: 3456, priority: 'high' }
+        { id: 'voice', name: 'Voice Recognition', description: 'Natural language processing engine', progress: 95, team: 134, commits: 1167, priority: 'critical' },
+        { id: 'skills', name: 'Alexa Skills', description: 'Third-party skill development platform', progress: 87, team: 156, commits: 890, priority: 'high' },
+        { id: 'smart-home', name: 'Smart Home', description: 'IoT device integration and control', progress: 92, team: 89, commits: 756, priority: 'high' },
+        { id: 'ai', name: 'AI Engine', description: 'Machine learning and conversation AI', progress: 89, team: 167, commits: 623, priority: 'high' },
+        { id: 'devices', name: 'Echo Devices', description: 'Hardware integration and device management', progress: 85, team: 145, commits: 987, priority: 'medium' }
       ],
       'logistics': [
-        { id: 'transportation', name: 'Transportation', description: 'Fleet management and route optimization', progress: 91, team: 456, commits: 5678, priority: 'high' },
-        { id: 'warehousing', name: 'Warehousing', description: 'Inventory management and automation', progress: 94, team: 567, commits: 6789, priority: 'critical' },
-        { id: 'drones', name: 'Prime Air Drones', description: 'Autonomous delivery drone network', progress: 73, team: 123, commits: 1567, priority: 'experimental' }
-      ],
-      'kindle': [
-        { id: 'reading', name: 'Reading Experience', description: 'E-reader software and features', progress: 93, team: 89, commits: 1890, priority: 'high' },
-        { id: 'store', name: 'Kindle Store', description: 'Digital bookstore and purchasing', progress: 96, team: 67, commits: 1456, priority: 'medium' }
-      ],
-      'gaming': [
-        { id: 'twitch', name: 'Twitch Platform', description: 'Live streaming and community features', progress: 95, team: 345, commits: 4567, priority: 'critical' },
-        { id: 'luna', name: 'Amazon Luna', description: 'Cloud gaming streaming service', progress: 81, team: 167, commits: 2345, priority: 'high' }
-      ],
-      'healthcare': [
-        { id: 'pharmacy', name: 'Amazon Pharmacy', description: 'Online prescription and delivery', progress: 89, team: 156, commits: 2345, priority: 'high' },
-        { id: 'health', name: 'Amazon Health', description: 'Telehealth and wellness services', progress: 83, team: 123, commits: 1789, priority: 'medium' }
+        { id: 'transportation', name: 'Transportation', description: 'Fleet management and route optimization', progress: 91, team: 256, commits: 1278, priority: 'high' },
+        { id: 'warehousing', name: 'Warehousing', description: 'Inventory management and automation', progress: 94, team: 267, commits: 1789, priority: 'critical' },
+        { id: 'lastmile', name: 'Last Mile Delivery', description: 'Local delivery and tracking systems', progress: 88, team: 145, commits: 821, priority: 'high' },
+        { id: 'drones', name: 'Prime Air Drones', description: 'Autonomous delivery drone network', progress: 73, team: 123, commits: 567, priority: 'experimental' },
+        { id: 'supply-chain', name: 'Supply Chain', description: 'Global supply chain optimization', progress: 86, team: 134, commits: 890, priority: 'medium' }
       ]
     };
     return projects[projectId as keyof typeof projects] || [];
@@ -70,10 +63,7 @@ const ProjectDetail = () => {
       'prime': 'Amazon Prime Services',
       'marketplace': 'Amazon Marketplace',
       'alexa': 'Amazon Alexa Ecosystem',
-      'logistics': 'Amazon Logistics Network',
-      'kindle': 'Amazon Kindle Platform',
-      'gaming': 'Amazon Gaming Division',
-      'healthcare': 'Amazon Healthcare Services'
+      'logistics': 'Amazon Logistics Network'
     };
     return titles[projectId as keyof typeof titles] || 'Unknown Project';
   };
@@ -84,10 +74,7 @@ const ProjectDetail = () => {
       'prime': 'Premium subscription services including video, music, gaming, and delivery',
       'marketplace': 'E-commerce platform connecting millions of sellers and buyers worldwide',
       'alexa': 'Voice AI ecosystem with smart home integration and skill platform',
-      'logistics': 'Global supply chain and delivery network optimization',
-      'kindle': 'Digital reading platform and e-book ecosystem',
-      'gaming': 'Gaming platform with live streaming and cloud gaming services',
-      'healthcare': 'Healthcare technology solutions and pharmacy services'
+      'logistics': 'Global supply chain and delivery network optimization'
     };
     return descriptions[projectId as keyof typeof descriptions] || 'Project description';
   };
@@ -109,7 +96,6 @@ const ProjectDetail = () => {
     { name: 'Backend Developer', icon: Database, color: 'aws-blue', description: 'Node.js, Python, APIs' },
     { name: 'DevOps Engineer', icon: Zap, color: 'accent', description: 'AWS, Docker, CI/CD' },
     { name: 'Data Scientist', icon: Star, color: 'chart-4', description: 'ML, Analytics, AI' },
-    { name: 'Mobile Developer', icon: Globe, color: 'chart-2', description: 'iOS, Android, React Native' },
     { name: 'Security Engineer', icon: Shield, color: 'destructive', description: 'Security, Compliance, Auditing' }
   ];
 
@@ -191,7 +177,7 @@ const ProjectDetail = () => {
                         </span>
                       </div>
 
-                      <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
+                      <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
                         {roles.map((role, roleIndex) => {
                           const isOwnRole = role.name === userRole;
                           const IconComponent = role.icon;

@@ -34,9 +34,8 @@ const RoleResource = () => {
   const userRole = localStorage.getItem('userRole') || 'Frontend Developer';
 
   const roles = [
-    'Frontend Developer', 'Backend Developer', 'DevOps Engineer', 'Product Manager', 
-    'QA Engineer', 'Data Scientist', 'Security Engineer', 'Mobile Developer',
-    'Cloud Architect', 'Site Reliability Engineer', 'AI/ML Engineer', 'UX Designer'
+    'Frontend Developer', 'Backend Developer', 'DevOps Engineer', 
+    'Data Scientist', 'Security Engineer'
   ];
 
   useEffect(() => {
@@ -151,30 +150,21 @@ const RoleResource = () => {
     },
     {
       id: 4,
-      title: "S3 Storage: Multi-region replication optimization",
+      title: "Marketplace: Payment gateway security update",
       status: "pending",
       pr: "#4521",
       author: "Maria Garcia",
       date: "8 hours ago",
-      link: "https://github.com/amazon/s3-storage/pull/4521"
+      link: "https://github.com/amazon/marketplace/pull/4521"
     },
     {
       id: 5,
-      title: "Marketplace: Payment gateway security update",
-      status: "rejected",
-      pr: "#5634",
-      author: "James Wilson",
-      date: "1 day ago",
-      link: "https://github.com/amazon/marketplace/pull/5634"
-    },
-    {
-      id: 6,
       title: "Logistics: Route optimization ML model update",
       status: "merged",
-      pr: "#6789",
+      pr: "#5634",
       author: "Emily Zhang",
       date: "1 day ago",
-      link: "https://github.com/amazon/logistics/pull/6789"
+      link: "https://github.com/amazon/logistics/pull/5634"
     }
   ];
 

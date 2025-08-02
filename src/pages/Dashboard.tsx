@@ -46,7 +46,7 @@ const Dashboard = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="animate-fade-up">
-              <h1 className="text-3xl font-bold gradient-text">Amazon Knowledge Hub</h1>
+              <h1 className="text-3xl font-bold gradient-text">Knowledge Hub</h1>
               <p className="text-muted-foreground mt-1">Welcome back, {userRole}</p>
             </div>
             <div className="flex items-center gap-4 animate-slide-in">
@@ -89,7 +89,7 @@ const Dashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-3xl font-bold gradient-text">24</p>
+                  <p className="text-3xl font-bold gradient-text">5</p>
                   <p className="text-sm text-muted-foreground">Amazon Services</p>
                 </div>
                 <FileText className="w-8 h-8 text-primary animate-pulse-glow" />
@@ -101,7 +101,7 @@ const Dashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-3xl font-bold text-aws-blue">1,247</p>
+                  <p className="text-3xl font-bold text-aws-blue">847</p>
                   <p className="text-sm text-muted-foreground">Documents</p>
                 </div>
                 <Users className="w-8 h-8 text-aws-blue" />
@@ -113,7 +113,7 @@ const Dashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-3xl font-bold text-accent">2,856</p>
+                  <p className="text-3xl font-bold text-accent">1,456</p>
                   <p className="text-sm text-muted-foreground">GitHub Commits</p>
                 </div>
                 <GitBranch className="w-8 h-8 text-accent" />
@@ -136,7 +136,7 @@ const Dashboard = () => {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-6 gradient-text animate-fade-up">Amazon Service Portfolio</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             <Card 
               className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-primary/30" 
               onClick={() => handleProjectClick('aws')}
@@ -144,7 +144,7 @@ const Dashboard = () => {
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   Amazon Web Services
-                  <Badge className="bg-gradient-aws text-white">23 services</Badge>
+                  <Badge className="bg-gradient-aws text-white">5 services</Badge>
                 </CardTitle>
                 <CardDescription>
                   Global cloud infrastructure and platform services
@@ -154,11 +154,11 @@ const Dashboard = () => {
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Users className="w-4 h-4" />
-                    2,847 engineers
+                    1,247 engineers
                   </span>
                   <span className="flex items-center gap-1">
                     <GitBranch className="w-4 h-4" />
-                    12,456 commits
+                    6,456 commits
                   </span>
                 </div>
               </CardContent>
@@ -172,7 +172,7 @@ const Dashboard = () => {
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   Amazon Prime
-                  <Badge className="bg-gradient-accent text-white">15 features</Badge>
+                  <Badge className="bg-gradient-accent text-white">5 features</Badge>
                 </CardTitle>
                 <CardDescription>
                   Subscription service and streaming platform
@@ -182,11 +182,11 @@ const Dashboard = () => {
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Users className="w-4 h-4" />
-                    1,234 engineers
+                    834 engineers
                   </span>
                   <span className="flex items-center gap-1">
                     <GitBranch className="w-4 h-4" />
-                    8,934 commits
+                    4,234 commits
                   </span>
                 </div>
               </CardContent>
@@ -200,7 +200,7 @@ const Dashboard = () => {
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   Amazon Marketplace
-                  <Badge className="bg-gradient-warm text-white">18 modules</Badge>
+                  <Badge className="bg-gradient-warm text-white">5 modules</Badge>
                 </CardTitle>
                 <CardDescription>
                   E-commerce platform and seller services
@@ -210,11 +210,11 @@ const Dashboard = () => {
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Users className="w-4 h-4" />
-                    3,156 engineers
+                    1,156 engineers
                   </span>
                   <span className="flex items-center gap-1">
                     <GitBranch className="w-4 h-4" />
-                    15,672 commits
+                    7,672 commits
                   </span>
                 </div>
               </CardContent>
@@ -228,7 +228,7 @@ const Dashboard = () => {
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   Amazon Alexa
-                  <Badge className="bg-success text-white">12 skills</Badge>
+                  <Badge className="bg-success text-white">5 skills</Badge>
                 </CardTitle>
                 <CardDescription>
                   Voice AI and smart home ecosystem
@@ -238,11 +238,11 @@ const Dashboard = () => {
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Users className="w-4 h-4" />
-                    987 engineers
+                    587 engineers
                   </span>
                   <span className="flex items-center gap-1">
                     <GitBranch className="w-4 h-4" />
-                    6,543 commits
+                    3,543 commits
                   </span>
                 </div>
               </CardContent>
@@ -256,7 +256,7 @@ const Dashboard = () => {
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   Amazon Logistics
-                  <Badge className="bg-chart-2 text-white">25 systems</Badge>
+                  <Badge className="bg-chart-2 text-white">5 systems</Badge>
                 </CardTitle>
                 <CardDescription>
                   Supply chain and delivery infrastructure
@@ -266,95 +266,11 @@ const Dashboard = () => {
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Users className="w-4 h-4" />
-                    2,456 engineers
+                    956 engineers
                   </span>
                   <span className="flex items-center gap-1">
                     <GitBranch className="w-4 h-4" />
-                    11,234 commits
-                  </span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card 
-              className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-chart-4/10 via-chart-4/5 to-transparent border-chart-4/30"
-              onClick={() => handleProjectClick('kindle')}
-              style={{animationDelay: '0.5s'}}
-            >
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  Amazon Kindle
-                  <Badge className="bg-chart-4 text-white">8 features</Badge>
-                </CardTitle>
-                <CardDescription>
-                  Digital reading platform and e-book ecosystem
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    432 engineers
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <GitBranch className="w-4 h-4" />
-                    3,876 commits
-                  </span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card 
-              className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-destructive/10 via-destructive/5 to-transparent border-destructive/30"
-              onClick={() => handleProjectClick('gaming')}
-              style={{animationDelay: '0.6s'}}
-            >
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  Amazon Gaming
-                  <Badge className="bg-destructive text-white">6 studios</Badge>
-                </CardTitle>
-                <CardDescription>
-                  Game development and Twitch integration
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    756 engineers
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <GitBranch className="w-4 h-4" />
-                    4,567 commits
-                  </span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card 
-              className="card-hover-glow cursor-pointer animate-fade-up bg-gradient-to-br from-chart-6/10 via-chart-6/5 to-transparent border-chart-6/30"
-              onClick={() => handleProjectClick('healthcare')}
-              style={{animationDelay: '0.7s'}}
-            >
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  Amazon Health
-                  <Badge className="bg-chart-6 text-white">14 solutions</Badge>
-                </CardTitle>
-                <CardDescription>
-                  Healthcare technology and pharmacy services
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    634 engineers
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <GitBranch className="w-4 h-4" />
-                    2,945 commits
+                    5,234 commits
                   </span>
                 </div>
               </CardContent>
