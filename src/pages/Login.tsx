@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import heroImage from "@/assets/hero-knowledge.jpg";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -71,7 +70,7 @@ const Login = () => {
       
       <div className="hidden lg:flex flex-1 relative">
         <img 
-          src={heroImage} 
+          src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1000&q=80" 
           alt="Knowledge Transfer Platform" 
           className="w-full h-full object-cover"
         />
